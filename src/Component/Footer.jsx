@@ -38,7 +38,7 @@ const Footer = () => {
     <div className='section4'>
     <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
     <p>JOIN OUR COMMUNITY<br/>lorem ipsum dolor</p>
-    <input placeholder="enter your Email address" style={{fontWeight: "900", width:"310px", height:"70px",
+    <input placeholder="enter your Email address" style={{fontWeight: "900", width:"310px", height:"45px",
     marginTop: "3%"}}/><br/>
     <button>SUBSCRIBE</button>
     </div>
