@@ -15,7 +15,10 @@ const Home = () => {
   </div>
 
 
-  <h1 className='header'>Road Status</h1>
+  <h1 className='header'
+  data-aos="fade-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="2000">Road Status</h1>
       <div className='flexbox'>
 <div className='text'>
 
@@ -25,15 +28,18 @@ const Home = () => {
 </div>
 
 <div className='img'
-// data-aos="fade-left"
-// data-aos-easing="ease-out-cubic"
-// data-aos-duration="2000"
+ data-aos="fade-left"
+ data-aos-easing="ease-out-cubic"
+data-aos-duration="2000"
 >
 </div>
 </div>
 
 
- <h1 className='header'>Report Bad Road</h1>
+ <h1 className='header1'
+ data-aos="fade-right"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="2000">Report Bad Road</h1>
 <div className='flexbox2'>
 <div className='img1'
 data-aos="fade-right"

@@ -23,20 +23,29 @@ h6{
   line-height: 35px;
   color: rgb(11, 42, 11);
 text-align: start;
-padding-top: 2%;
+padding-top: 1%;
 font-weight: 100;
 }
 
 .header {
   color: rgb(11, 42, 11);
-    text-align: center;
+    text-align:left;
     margin-top: 3%;
+    padding-left: 7%;
     font-size: 35px;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
+.header1 {
+  color: rgb(11, 42, 11);
+    text-align:left;
+    margin-top: 3%;
+    padding-left: 44%;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 
 
