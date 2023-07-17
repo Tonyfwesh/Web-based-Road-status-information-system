@@ -10,12 +10,12 @@ const Navbar = () => {
         <NavLink  style={{textDecoration:"none", color:"white",fontSize:"25px"}}  exact to="#">RoadStatusInfo</NavLink>
         </div>
         <div className='nav-menu'>
-          <NavLink  className="href" exact to="/">Home</NavLink>
-          <NavLink  className="href" to="/About">About</NavLink>
-          <NavLink  className="href" to="/RoadStatus">Road Status</NavLink>
-          <NavLink  className="href" to="/Report">Report A Bad Road</NavLink>
-          <NavLink  className="href" to="/Signin">Sign In</NavLink>
-          <NavLink   to="/Signup"><button className='btn'>Sign Up</button></NavLink>
+          <NavLink  className="href" exact to="/">HOME</NavLink>
+          <NavLink  className="href" to="/About">ABOUT</NavLink>
+          <NavLink  className="href" to="/RoadStatus">ROAD STATUS</NavLink>
+          <NavLink  className="href" to="/Report">REPORT A BAD ROAD</NavLink>
+          <NavLink  className="href" to="/Signin">SIG IN</NavLink>
+          <NavLink   to="/Signup"><button className='btn'>SIGN UP</button></NavLink>
 
         </div>
       </div>

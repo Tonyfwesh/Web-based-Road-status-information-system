@@ -36,7 +36,10 @@ data-aos-duration="2000"
 </div>
 
 
- <h1 className='header'>Report Bad Road</h1>
+ <h1 className='header1'
+ data-aos="fade-right"
+ data-aos-easing="ease-out-cubic"
+data-aos-duration="2000">Report Bad Road</h1>
 <div className='flexbox2'>
 <div className='img1'
 data-aos="fade-right"
