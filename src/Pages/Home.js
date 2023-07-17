@@ -14,8 +14,8 @@ const Home = () => {
   </h6>
   </div>
 
-
-  <h1 className='header'>Road Status</h1>
+  <h1 className='service'>Our Services</h1>
+  <h2 className='header'>Road Status</h2>
       <div className='flexbox'>
 <div className='text'>
 
@@ -31,6 +31,7 @@ const Home = () => {
 >
 </div>
 </div>
+
 
 
  <h1 className='header'>Report Bad Road</h1>
