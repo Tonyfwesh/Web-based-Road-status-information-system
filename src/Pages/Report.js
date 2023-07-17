@@ -1,8 +1,9 @@
 import React from 'react'
+import "../Style/badroad.css"
 
 const Report = () => {
   return (
-    <div>
+    <div className='holder'>
       
     </div>
   )
