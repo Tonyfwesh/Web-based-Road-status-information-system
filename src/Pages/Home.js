@@ -14,11 +14,11 @@ const Home = () => {
   </h6>
   </div>
 
-
-  <h1 className='header'
+  <h1 className='service'>Our Services</h1>
+  <h2 className='header'
   data-aos="fade-left"
 data-aos-easing="ease-out-cubic"
-data-aos-duration="2000">Road Status</h1>
+data-aos-duration="2000">Road Status</h2>
       <div className='flexbox'>
 <div className='text'>
 
@@ -36,10 +36,7 @@ data-aos-duration="2000"
 </div>
 
 
- <h1 className='header1'
- data-aos="fade-right"
-data-aos-easing="ease-out-cubic"
-data-aos-duration="2000">Report Bad Road</h1>
+ <h1 className='header'>Report Bad Road</h1>
 <div className='flexbox2'>
 <div className='img1'
 data-aos="fade-right"

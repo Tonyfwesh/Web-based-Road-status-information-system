@@ -26,23 +26,21 @@ text-align: start;
 padding-top: 1%;
 font-weight: 100;
 }
+.service{
+  text-align: center;
+  margin-top: 3%;
+  font-size: 35px;
+  font-weight: bold;
+  margin-left: 7%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 .header {
   color: rgb(11, 42, 11);
-    text-align:left;
+    text-align: start;
     margin-top: 3%;
-    padding-left: 7%;
-    font-size: 35px;
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.header1 {
-  color: rgb(11, 42, 11);
-    text-align:left;
-    margin-top: 3%;
-    padding-left: 44%;
-    font-size: 35px;
+    margin-left: 7%;
+    font-size: 30px;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
