@@ -9,19 +9,35 @@ const Report = () => {
         <h6>Kindly report a  Road you consider bad. We shall attend to your feedback as soon as possible.</h6>
         <form>
           <div className='input-group'>
-          <div className='input-feild'>
-          <label for="name">Surname:</label><br/>
+          <label for="name">Surname:</label>
            <input type='text' placeholder='Surname'></input>
-           <br/>
-           <label for="name">First Name:</label><br/>
+          
+           <label for="name">First Name:</label>
            <input type='text' placeholder='First Name'></input>
-           <br/>
-           <label for="name">Other Names:</label><br/>
+           
+           <label for="name">Other Names:</label>
            <input type='text' placeholder='Other Name'></input>
-           <br/>
-           <label for="email">E-mail:</label><br/>
+           
+           <label for="email">E-mail:</label>
            <input type='email' placeholder='E-mail'></input>
-          </div>
+         
+           <label for="email">Phonenumber:</label>
+           <input type='digit' placeholder='Phonenumber'></input>
+           
+           <label for="state">State:</label>
+           <input type='text' placeholder='Enugu'></input>
+           
+           <label for="city">City:</label>
+           <input type='text' placeholder='Please select'></input>
+           
+           <label for="location">Address of bad road:</label>
+           <input type='text' placeholder=' '></input>
+         
+           <label for="badroad">HOW WOULD YOU rate THE STATE OF THE ROAD?:</label>
+           <input type='option' placeholder=' '></input>
+           
+           <label for="badroad">DESCRIBE THE ROAD:</label>
+           <textarea type='text' placeholder='Please type our description here '></textarea>
           
           </div>
         </form>

@@ -29,6 +29,7 @@
     height:40px;
     border-radius: 20px;
     font-size: 15px;
+    font-weight: bold;
     color:  rgb(10, 48, 10);
     text-decoration: none;
     border: black;
@@ -41,7 +42,7 @@
     transition: 0.3ms ease-in-out;
 }
 .href{
-    font-size: 18px;
+    font-size: 15px;
     color: white;
     text-decoration: none;
 }
