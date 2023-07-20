@@ -33,10 +33,10 @@ const Report = () => {
            <label for="location">Address of bad road:</label>
            <input type='text' placeholder=' '></input>
          
-           <label for="badroad">HOW WOULD YOU rate THE STATE OF THE ROAD?:</label>
+           <label for="badroad">HOW WOULD YOU rate THE STATE OF THE ROAD:</label>
            <input type='option' placeholder=' '></input>
            
-           <label for="badroad">DESCRIBE THE ROAD:</label>
+           <label for="badroad">DESCRIBE THE bad ROAD:</label>
            <textarea type='text' placeholder='Please type our description here '></textarea>
           
           </div>

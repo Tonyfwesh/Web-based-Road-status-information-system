@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+.image{
+    background-image: linear-gradient(rgba(7, 70, 19, 0.7),rgba(213, 235, 213, 0.7)), url("../image/roadsatus2.jpg");
+     height: 150px;
+     position: relative;
+     background-size:cover;
+     background-position: center;
+     object-fit: cover; 
+  }
+  .top{
+    color: white;
+    font-size: 65px;
+    text-align: center;
+    padding-top: 5%;
+    font-family:  Pattaya;
+  }
+  
+ 
+  /* .logo{
+    height: 180px;
+    width: 180px;
+    background-color: grey;
+    border-radius: 100%;
+    margin-left: 45%;
+    margin-top: 3%;
+  } */
+  .text p{
+    color: black;
+    font-size: 22px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: start;
+    line-height: 35px;
+    margin-bottom: 1%;
+    margin-top: 2%;
+  }
+  .aim{
+    font-size: 20px;
+    
+  }
+  
+.pro{
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  .ceo{
+    background:url("../image/roadsatus2.jpg");
+     height: 220px;
+     width: 220px;
+     position: relative;
+     background-size: cover;
+     background-position: center;
+     object-fit: cover; 
+     margin-left: 44%;
+     margin-bottom: 3%;
+  }
+ 

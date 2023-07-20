@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
 .holder{
 width: 100%;
@@ -14,7 +14,7 @@ position: relative;
 }
 
 .formbox{
-   width: 90%;
+   width: 75%;
    height: 80%;
    position: absolute;
    top: 50%;
@@ -78,7 +78,7 @@ input::placeholder{
 }
 textarea{
     width: 900px;
-    height:140px;
+    height:220px;
     border: none;
     background-color: rgb(190, 178, 178);
     
