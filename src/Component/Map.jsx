@@ -19,7 +19,7 @@ const Googlemap = () => {
   
 
     const { isLoaded } = useLoadScript({
-        // googleMapsApiKey: "AIzaSyByQ_yBS39mHWCUooITp2we0pnwtgWNAXA",
+        googleMapsApiKey: ""
       });
       const center = useMemo(() => ({ lat: 6.459964, lng: 7.548949 }),libraries, ["places"]);
 
