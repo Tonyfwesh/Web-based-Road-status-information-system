@@ -16,17 +16,23 @@ const About = () => {
 
     <div className='text'>
 
-        <p><b>Roadstatusinfo</b> is a computer science project- A web based road status information system(a case study of Enugu state). it is a web based solution that desires to leverage on the power of technology to improve the efficiency and effectiveness of road maintenance in Enugu state.
+        <p><b>Roadstatusinfo</b> is a product of a computer science project by the University of Nigeria, Nsukka (UNN) titled: "A web based road status information system (a case study of Enugu state). The project is a web based solution that desires to leverage on the power of technology to improve the efficiency and effectiveness of road maintenance in Enugu state.
 The system aims to provide users with up-to-date information on roads that are in poor condition and  are in need of repair or maintenance and to provide real time updates on road conditions in Enugu state. </p>
 
-           <div className='aim'>
-           <p><b>Our Aim:</b> To  develop a web based road status information system for the government of Enugu state for improved awareness about the status of the various roads in the state for immediate repairs and better services to the masses.<br/>
-           <b>Our Objectives:</b> The specific objectives for achieving these aims are to :
-1.Develop a user-friendly interface that enables road users to easily check the status of a road anytime they want to ply the road in order to avoid road accident. 
-2.Regularly update information about the status of the road so as to carry the road users along 24/7 about the safety of such roads.
-3.Provide a platform that enables road users to upload detailed information about the status of any given road to the state road maintenance agency for proper allocation of funds to fix the road.
-4.Provide up-to-date information on road conditions and traffic flow; This can allow drivers to adjust their route or travel times to avoid congested areas, reducing overall traffic and easing congestion.</p>
-           </div>
+          <div className='objectives'>
+            <h1>Aim of the research:</h1>
+            <h6>To  develop a web based road status information system for the government of Enugu state which is important for improved awareness about the status of the various roads in the state that require immediate repair and for  better road services to the masses.</h6>
+           
+           <h1>Objectives of the research:</h1> 
+           <h6>The specific objectives for achieving these aims are to :
+           <ol>
+            <li>Develop a user-friendly interface that enables road users to easily check the status of a road anytime they want to ply the road in order to avoid road accident.</li>
+            <li>Regularly update information about the status of the road so as to carry the road users along 24/7 about the safety of such roads.</li>
+            <li>Provide a platform that enables road users to upload detailed information about the status of any given road to the state road maintenance agency for proper allocation of funds to fix the road.</li>
+            <li>Provide up-to-date information on road conditions and traffic flow, this can allow drivers to adjust their route or travel times to avoid congested areas, reducing overall traffic and easing congestion.</li>
+            </ol>
+            </h6>
+</div>
      </div>
      <h1 className='pro'>THE PROJECT RESEARCHER</h1>
      <div className='ceo'></div>
