@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom"
 
 const Navbar = () => {
   return (
-    <div>
+    <>
       <div className='nav-bar'>
         <div className='head-text'>
         <NavLink  style={{textDecoration:"none", color:"white",fontSize:"25px"}}  exact to="#">RoadStatusInfo</NavLink>
@@ -19,7 +19,7 @@ const Navbar = () => {
 
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

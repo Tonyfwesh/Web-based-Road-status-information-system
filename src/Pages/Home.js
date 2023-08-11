@@ -4,7 +4,7 @@ import "../Style/home.css"
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className="container" style={{backgroundColor: "rgb(219, 243, 224)"}}>
       <Homeslide/>
       <div className='welcometext'>
   <h1 >Welcome to RoadStatusInfo!</h1>
