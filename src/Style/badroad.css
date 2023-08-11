@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+.holder{
+width: 100%;
+min-height: 1500px;
+background-image: linear-gradient(rgba(7, 70, 19, 0.7),rgba(213, 235, 213, 0.7)), url("../image/roadsatus2.jpg");
+background-position: center;
+background-size: cover;
+position: relative;
+
+}
+
+.formbox{
+   width: 75%;
+   height: 80%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   background: white;
+   padding: 50px 60px 70px; 
+   text-align: center;
+}
+
+.formbox h1::after{
+    content: '';
+    width: 60px;
+    height: 6px;
+    border-radius: 5px;
+    background: rgb(11, 42, 11);
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.formbox h1{
+    color: rgb(11, 42, 11);
+    text-align: center;
+    margin-top: 2%;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.formbox h6{
+  font-size: 18px;
+  line-height: 35px;
+  color: rgb(11, 42, 11);
+text-align: center;
+padding-top: 2%;
+font-weight: 100;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+label{
+    display: flex;
+    align-items: start;
+    font-size: 19px;
+    margin-top: 2%;
+    text-transform: uppercase;
+}
+input{
+    width: 400px;
+    height: 50px;
+    border: none;
+    background-color: #d6d6d6;
+    border-radius: 5px;
+    
+}
+input::placeholder{
+    color: rgb(255, 239, 239);
+}
+textarea{
+    width: 900px;
+    height:220px;
+    border: none;
+    background-color: #d6d6d6;
+    
+}

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+.image{
+    background-image: linear-gradient(rgba(7, 70, 19, 0.7),rgba(213, 235, 213, 0.7)), url("../image/roadsatus2.jpg");
+     height: 150px;
+     position: relative;
+     background-size:cover;
+     background-position: center;
+     object-fit: cover; 
+  }
+  .top{
+    color: white;
+    font-size: 65px;
+    text-align: center;
+    padding-top: 5%;
+    font-family:  Pattaya;
+  }
+  
+ 
+  /* .logo{
+    height: 180px;
+    width: 180px;
+    background-color: grey;
+    border-radius: 100%;
+    margin-left: 45%;
+    margin-top: 3%;
+  } */
+  .text p{
+    color: rgb(11, 42, 11);
+    font-size: 22px;
+    
+    text-align: start;
+    line-height: 35px;
+    margin: 2% 8% 2% 7%;
+  }
+
+  
+.pro{
+  color: white;
+  background-color: rgb(11, 42, 11);
+  width: 43%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 1%;
+  margin: 0 8% 0 7%;
+  }
+  .ceo{
+    background:url("../image/roadsatus2.jpg");
+     height: 220px;
+     width: 220px;
+     position: relative;
+     background-size: cover;
+     background-position: start;
+     object-fit: cover; 
+     margin: 0 8% 0 7%;
+     margin-top: 3%;
+     
+  }
+  .objectives{
+    margin: 0 8% 0 7%;
+  }
+ .objectives h1{
+  color: white;
+  background-color: rgb(11, 42, 11);
+  width: 50%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 1%;
+ }
+ .objectives h6{
+  font-size: 22px;
+  margin-bottom: 2%;
+  color: rgb(11, 42, 11);
+ }
