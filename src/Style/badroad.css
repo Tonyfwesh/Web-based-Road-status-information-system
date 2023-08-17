@@ -5,7 +5,7 @@
 }
 .holder{
 width: 100%;
-min-height: 1500px;
+min-height: 1800px;
 background-image: linear-gradient(rgba(7, 70, 19, 0.7),rgba(213, 235, 213, 0.7)), url("../image/roadsatus2.jpg");
 background-position: center;
 background-size: cover;
@@ -82,4 +82,21 @@ textarea{
     border: none;
     background-color: #d6d6d6;
     
+}
+#file{
+    width: 300px;
+    height: 30px;
+    border: none;
+}
+.button{
+    margin-top: 50px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: rgb(11, 42, 11);
+    margin-left: 40%;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }

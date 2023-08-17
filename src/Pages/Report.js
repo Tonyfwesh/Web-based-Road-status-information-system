@@ -38,7 +38,12 @@ const Report = () => {
            
            <label for="badroad">DESCRIBE THE bad ROAD:</label>
            <textarea type='text' placeholder='Please type our description here '></textarea>
+
+           <label for="picture">Attach File:</label>
+           <input type='file' name='file' id='file'></input>
+           <input type='file' name='file' id='file'></input>
           
+          <button className='button'> submit </button>
           </div>
         </form>
         </div>      
