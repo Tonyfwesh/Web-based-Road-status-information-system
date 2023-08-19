@@ -5,6 +5,11 @@
 
 .slide{
     overflow: hidden;
+    width: 100%;
+}
+.setwidth{
+    overflow: hidden;
+    width: 100%;
 }
 /* .container{
     background-image: linear-gradient(to right, #080825a1, #0d0a429d);
@@ -15,7 +20,7 @@
 .slide-details{
      
     width: 100%;
-    
+    overflow: hidden;
     height: 420px;
     object-fit: cover;
     background-position: center;

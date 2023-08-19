@@ -21,7 +21,7 @@ const Homeslide = () => {
        <Slider {...settings} className='slide'>
     
         {carouselData.map((item, index) => (
-          <div key={index} className=''>
+          <div key={index} className='setwidth'>
         <div className='slide-details' style={{backgroundImage:`url(${item.url})`}}>
           <div className='details'>
           <h1>{item.text}</h1>
