@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 // import cookies from "universal-cookie"
 import { useAuth } from "../context/AuthContext";
-
+import "../Style/signup.css"
 
 const Signup = () => {
     
@@ -43,20 +43,38 @@ const Signup = () => {
   return (
     <>
    
-      <div className="flex w-full h-screen ">
+      <div className="display1">
     
      
-      <div className='bg-white w-3/5  flex flex-col justify-center items-center m-0 p-0'>
-        <h1 className='text-4xl text-blue-800 font-bold mt-5'>Create account</h1>
-        <p className='text-blue-800 pt-2 text-sm'>Embark on Memorable Tours Across the world </p>
+      <div className='holderrr'>
+        <h1 className='headtextt'>Create account</h1>
+        <p className='htextt2'>Please fill in your details to register </p>
         {/* {currentUser.email} */}
         {error && <div className="bg-red-500 w-[500px] h-12 justify-center 
         font-bold my-4 flex items-center text-white">{error}</div>}
         <form onSubmit={HandleSubmit}>
-        <div className='flex flex-col gap-3'>
-          <label className='text-xl text-black'>Email</label>
+        <div className='columnn'>
+          
+          <label className='textt1'>Surname</label>
+          <input type="etext" placeholder="surname" ></input>
+
+          <label className='textt1'>firstname</label>
+          <input type="etext" placeholder="surname" ></input>
+
+          <label className='textt1'>username</label>
+          <input type="etext" placeholder="surname" ></input>
+
+          <label className='textt1'>Gender</label>
+          <select>
+           <option value=""> </option>
+            <option value="">Male</option>
+            <option value="">Female</option>
+           </select>
+
+           <label className='textt1'>Email</label>
           <input type="email"
            placeholder="e.g example123@example.com"
+           
            
            required
            ref={emailRef}
@@ -75,22 +93,23 @@ const Signup = () => {
            required
            className='text-black w-[500px] h-12 text-lg pl-2 border rounded-xl border-blue-800 bg-transparent' />
 
-          <button disabled={loading} type='submit' className='w-[500px] hover:bg-gray-900 h-12 bg-black text-white text-lg rounded-xl mt-6'>Register</button>
+          <button disabled={loading} type='submit' className='register'>Register</button>
         </div>
         </form>
-        <p className='pt-2 text-lg w-[500px]   text-blue-800'>Already have an account?
-         <span className='cursor-pointer text-black'><Link to="/Login">Login</Link></span></p>
+        <p className='htextt3'>Already have an account?
+         <span className='htextt3'><Link to="/signin">Login</Link></span></p>
         
        
-        <p  className='mt-0 text-lg text-black hover:bg-blue-950 w-[500px]  h-14 flex justify-center items-center cursor-pointer hover:rounded-xl'> 
+        <p  className='googlee'> 
         {/* <FcGoogle className='text-2xl'/> */}
         &nbsp;&nbsp;Sign Up With Google</p>
       {/* <button onClick={logout}>logout</button> */}
       </div>
-      <div className="w-2/5 bg-center bg-cover object-cover h-full"
-      style={{backgroundImage: `url("https://cdn.pixabay.com/photo/2014/06/06/09/36/sydney-opera-house-363244_1280.jpg")`}}>
+      
       </div>
-      </div>
+    
+
+
 
    
 

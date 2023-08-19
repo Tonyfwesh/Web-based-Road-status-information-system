@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.display{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    min-height: 700px;
+    background-image: linear-gradient(rgba(7, 70, 19, 0.7),rgba(213, 235, 213, 0.7)), url("../image/roadsatus2.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.holderr{
+    width: 35%;
+   height: 60%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   background: white;
+   padding: 40px 60px 70px; 
+   text-align: center;
+
+}
+
+
+.headtext{
+    text-transform: uppercase;
+    margin-top: -5px;
+    font-size: 35px;
+    color: green;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.htext2{
+    padding-top: -5px;
+    font-size: 15px;
+    color: green;
+    font-weight:lighter ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+} 
+
+.column{
+    display: flex;
+    flex-direction: column;
+    column-gap: 70px;
+    margin-left: 7%;
+}
+
+label{
+    display: flex;
+    align-items: start;
+    font-size: 18px;
+    margin-top: 2%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.text1{
+    color: black;
+}
+
+.pword{
+    color: black;
+}
+
+
+.login{
+    margin-top: 35px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: rgb(11, 42, 11);
+    margin-left: 25%;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+}
+
+.htext3{
+    padding-top: 5px;
+    font-size: 18px;
+    color: black;
+    font-weight:lighter ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+}
+
+.google{
+    margin-top: 0px;
+    color:  black;
+    width: 50px;
+    
+    justify-content: center;
+    align-items: center;
+
+}

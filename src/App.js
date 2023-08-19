@@ -12,6 +12,8 @@ import Footer from './Component/Footer';
 import Signup from './Pages/Signup';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import {AuthProvider} from "./context/AuthContext"
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
   return (
     <>
     <Router>
+      <AuthProvider>
     <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -33,6 +36,7 @@ function App() {
         <Route path="/Signup" element={<Signup/>}/>
       </Routes>
       <Footer/>
+      </AuthProvider>
     </Router>
     
     </>

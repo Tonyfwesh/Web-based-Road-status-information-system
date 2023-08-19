@@ -6,6 +6,7 @@ import { auth, googleProvider} from "../config/firebase"
 import { useAuth } from "../context/AuthContext";
 // import { Alert } from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.css';
+import "../Style/signin.css"
 
 const Signin = () => {
     
@@ -39,18 +40,18 @@ const Signin = () => {
   return (
     <>
    
-      <div className="flex w-full h-screen ">
+      <div className="display">
     
      
-      <div className='bg-white w-3/5  flex flex-col justify-center items-center m-0 p-0'>
-        <h1 className='text-4xl text-blue-800 font-bold mt-5'>Login</h1>
-        <p className='text-blue-800 pt-2 text-sm'>Embark on Memorable Tours Across the world </p>
+      <div className='holderr'>
+        <h1 className='headtext'>sign in</h1>
+        <p className='htext2'>Please enter your details to login </p>
         {/* {currentUser.email} */}
         {error && <div className="bg-red-500 w-[500px] h-12 justify-center 
         font-bold my-4 flex items-center text-white">{error}</div>}
         <form onSubmit={HandleSubmit}>
-        <div className='flex flex-col gap-3'>
-          <label className='text-xl text-black'>Email</label>
+        <div className='column'>
+          <label className='text1'>Email</label>
           <input type="email"
            placeholder="e.g example123@example.com"
            
@@ -58,32 +59,30 @@ const Signin = () => {
            ref={emailRef}
             className='text-black w-[500px] border-blue-800 text-lg pl-2 h-12 border rounded-xl  bg-transparent' />
           
-          <label className='text-xl text-black'>Password</label>
+          <label className='pword'>Password</label>
           <input type="password"
-           placeholder="*********"
+           placeholder="*******"
            ref={passwordRef}
             className='text-black w-[500px] border-blue-800 text-lg pl-2 h-12 border rounded-xl  bg-transparent' />
           
           
-          <button disabled={loading} type='submit' className='w-[500px] hover:bg-gray-900 h-12 bg-black text-white text-lg rounded-xl mt-6'>
+          <button disabled={loading} type='submit' className='login'>
             Login</button>
         </div>
         </form>
         <div className='flex w-[500px] justify-between items-center text-lg pt-4 pb-4'>
-        <p className='  text-blue-800'>Don't have an account?
+        <p className='htext3'>Don't have an account yet?
          <span className='cursor-pointer text-black'><Link to="/SIgnup"> Register</Link></span></p>
          <p className='cursor-pointer text-red-500 hover:text-red-700 underline'>
-          <Link to= "/forgotPassword" >forgot password</Link></p>
+          <Link to= "/signup" >forgot password</Link></p>
          </div>
        
-        <p  className='mt-0 text-lg text-black hover:bg-blue-950 w-[500px]  h-14 flex justify-center items-center cursor-pointer hover:rounded-xl'>
+        <p  className='google'>
            {/* <FcGoogle className='text-2xl'/> */}
            &nbsp;&nbsp;Sign Up With Google</p>
       {/* <button onClick={logout}>logout</button> */}
       </div>
-      <div className="w-2/5 bg-center bg-cover object-cover h-full"
-      style={{backgroundImage: `url("https://cdn.pixabay.com/photo/2014/06/06/09/36/sydney-opera-house-363244_1280.jpg")`}}>
-      </div>
+      
       </div>
 
    
