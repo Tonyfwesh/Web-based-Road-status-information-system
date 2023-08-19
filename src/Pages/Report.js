@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "../Style/badroad.css"
 
 const Report = () => {
+  const [state, setState]= useState("")
   return (
     <div className='holder'>
       <div className='formbox'>
@@ -25,7 +26,7 @@ const Report = () => {
            <input type='digit' placeholder='Phonenumber'></input>
            
            <label for="state">State:</label>
-           <input type='text' placeholder='Enugu'></input>
+           <input type='text' value={state} placeholder='Enugu'></input>
            
            <label for="city">City:</label>
            <input type='text' placeholder='Please select'></input>
@@ -34,7 +35,12 @@ const Report = () => {
            <input type='text' placeholder=' '></input>
          
            <label for="badroad">HOW WOULD YOU rate THE STATE OF THE ROAD:</label>
-           <input type='option' placeholder=' '></input>
+           <select>
+           <option value=""> </option>
+            <option value="">Bad</option>
+            <option value="">Very Bad</option>
+            <option value="">Totally damaged</option>
+           </select>
            
            <label for="badroad">DESCRIBE THE bad ROAD:</label>
            <textarea type='text' placeholder='Please type our description here '></textarea>
