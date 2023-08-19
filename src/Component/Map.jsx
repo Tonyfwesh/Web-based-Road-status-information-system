@@ -17,9 +17,10 @@ const options= {
 const Googlemap = () => {
 
   
+  
 
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: ""
+        googleMapsApiKey:"" 
       });
       const center = useMemo(() => ({ lat: 6.459964, lng: 7.548949 }),libraries, ["places"]);
 
@@ -27,7 +28,8 @@ const Googlemap = () => {
      <div className="">
       {!isLoaded ? (
         <h1>Loading...</h1>
-      ) : (
+      ) :
+       (
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
           center={center}
@@ -36,6 +38,7 @@ const Googlemap = () => {
           // onChange={""}
           // onChildClick={""}
         >
+          
           <Marker position={center}/>
           </GoogleMap>
       )}
