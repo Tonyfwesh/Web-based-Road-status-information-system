@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react'
-// import { FcGoogle } from "react-icons/fc";
+import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate} from 'react-router-dom';
 import { auth, googleProvider} from "../config/firebase"
 // import cookies from "universal-cookie"
@@ -47,8 +47,7 @@ const Signin = () => {
         <h1 className='headtext'>sign in</h1>
         <p className='htext2'>Please enter your details to login </p>
         {/* {currentUser.email} */}
-        {error && <div className="bg-red-500 w-[500px] h-12 justify-center 
-        font-bold my-4 flex items-center text-white">{error}</div>}
+        {error && <div className="error">{error}</div>}
         <form onSubmit={HandleSubmit}>
         <div className='column'>
           <label className='text1'>Email</label>
@@ -78,8 +77,8 @@ const Signin = () => {
          </div>
        
         <p  className='google'>
-           {/* <FcGoogle className='text-2xl'/> */}
-           &nbsp;&nbsp;Sign Up With Google</p>
+           <FcGoogle className='text-2xl'/>
+           Continue With Google</p>
       {/* <button onClick={logout}>logout</button> */}
       </div>
       

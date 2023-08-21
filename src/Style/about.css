@@ -52,13 +52,18 @@
   margin: 0 8% 0 7%;
   }
   .ceo{
-    background:url("../image/roadsatus2.jpg");
+    background:url("../image/tony.jpeg");
      height: 220px;
      width: 220px;
      position: relative;
      background-size: cover;
      background-position: start;
      object-fit: cover; 
+     border-color: rgb(11, 42, 11);
+     
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+     
      margin: 0 8% 0 7%;
      margin-top: 3%;
      

@@ -1,12 +1,13 @@
 import React, {useState, useRef} from 'react'
-// import { FcGoogle } from "react-icons/fc";
+import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-// import cookies from "universal-cookie"
 import { useAuth } from "../context/AuthContext";
 import "../Style/signup.css"
 
 const Signup = () => {
+  
+
     
      const [error, setError] = useState("")
      const [loading, setLoading]= useState(false)
@@ -30,7 +31,7 @@ const Signup = () => {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
-      navigate("/Login")
+      navigate("/Signin")
      } catch(err){
       setError("Failed to create account")
       console.error(err)
@@ -40,39 +41,50 @@ const Signup = () => {
   }
   
    
-  return (
+   return (
     <>
    
-      <div className="display1">
+       <div className="display1">
     
      
-      <div className='holderrr'>
-        <h1 className='headtextt'>Create account</h1>
-        <p className='htextt2'>Please fill in your details to register </p>
-        {/* {currentUser.email} */}
-        {error && <div className="bg-red-500 w-[500px] h-12 justify-center 
-        font-bold my-4 flex items-center text-white">{error}</div>}
+       <div className='holderrr'>
+         <h1 className='headtextt'>Create account</h1>
+         <p className='htextt2'>Please fill in your details to register </p>
+         {/* {currentUser.email} */}
+         {error && <div className="error">{error}</div>}
         <form onSubmit={HandleSubmit}>
         <div className='columnn'>
           
           <label className='textt1'>Surname</label>
-          <input type="etext" placeholder="surname" ></input>
+          <input type="etext" 
+          
+           placeholder="surname" ></input>
 
           <label className='textt1'>firstname</label>
-          <input type="etext" placeholder="surname" ></input>
+          <input type="etext" 
+          
+          placeholder="surname" ></input>
 
           <label className='textt1'>username</label>
-          <input type="etext" placeholder="surname" ></input>
+          <input type="etext" 
+          
+          placeholder="surname" ></input>
 
           <label className='textt1'>Gender</label>
-          <select>
+          <select >
            <option value=""> </option>
             <option value="">Male</option>
             <option value="">Female</option>
            </select>
 
+           <label className='textt1'>city</label>
+          <input type="etext" 
+          
+          placeholder="city" ></input>
+
            <label className='textt1'>Email</label>
           <input type="email"
+          
            placeholder="e.g example123@example.com"
            
            
@@ -80,14 +92,19 @@ const Signup = () => {
            ref={emailRef}
             className='text-black w-[500px] border-blue-800 text-lg pl-2 h-12 border   bg-transparent' />
           
+          {/* <label for="picture">Attach Picture:</label>
+           <input type='file' name='file' id='file'></input> */}
+
           <label className='text-xl text-black'>Password</label>
           <input type="password"
+          
            placeholder="*********"
            ref={passwordRef}
             className='text-black w-[500px] border-blue-800 text-lg pl-2 h-12 border rounded-xl  bg-transparent' />
           
           <label className='text-xl text-black'>Confirm Password</label>
           <input type='password'
+          
            placeholder='*********' 
            ref={confirmPasswordRef}
            required
@@ -100,10 +117,10 @@ const Signup = () => {
          <span className='htextt3'><Link to="/signin">Login</Link></span></p>
         
        
-        <p  className='googlee'> 
-        {/* <FcGoogle className='text-2xl'/> */}
-        &nbsp;&nbsp;Sign Up With Google</p>
-      {/* <button onClick={logout}>logout</button> */}
+        <p onClick={""} className='googlee'> 
+        <FcGoogle className='text-2xl'/>
+        Sign Up With Google</p>
+      
       </div>
       
       </div>
@@ -118,3 +135,20 @@ const Signup = () => {
 }
 
 export default Signup
+
+// const submit = (surname, firstname, email, gender, city, password, cpassword ) => {
+//   fetch('http://roadapi.managementbookings.online/api/register', {
+//     method: 'POST',
+//     body: JSON.stringify({
+//         lastname: surname,
+//         firstname: firstname,
+//          email: email,
+//          gender: gender,
+//          city: city,
+//          password: password
+//          confirm password: cpassword
+//         userId: Math.random().toString(36).slice(2),
+//     }),
+//      headers: {
+//         'Content-type': 'application/json; charset=UTF-8',
+//     },

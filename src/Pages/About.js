@@ -16,7 +16,7 @@ const About = () => {
 
     <div className='text'>
 
-        <p><b>Roadstatusinfo</b> is a product of a computer science project by the University of Nigeria, Nsukka (UNN) titled: "A web based road status information system (a case study of Enugu state). The project is a web based solution that desires to leverage on the power of technology to improve the efficiency and effectiveness of road maintenance in Enugu state.
+        <p><b>Roadstatusinfo</b> is a product of a Bachelor's degree project in  computer science, University of Nigeria, Nsukka (UNN) titled: "A web based road status information system (a case study of Enugu state). The project is a web based solution that desires to leverage on the power of technology to improve the efficiency and effectiveness of road maintenance in Enugu state.
 The system aims to provide users with up-to-date information on roads that are in poor condition and  are in need of repair or maintenance and to provide real time updates on road conditions in Enugu state. </p>
 
           <div className='objectives'>
@@ -38,16 +38,11 @@ The system aims to provide users with up-to-date information on roads that are i
      <div className='ceo'></div>
      <div className= "text">
      <p>
-     Punky Bakeries was founded in 2012 when Noskinpain Abubarkar turned her passion
-      for baking into a business. While in management consulting, she decided it was
-       time to leave a job she liked and face the life she loves. The business was 
-       formerly known as Everything Nuts specializing in cookies, brownies, and muffins.
-       Customers fell in love, word got out and requests for cakes started rolling in.
-     Over the years, the business has grown from a bakery with just a few products, to
-      one producing a wide variety of products, and has still been able to hold on to 
-      its original ethicss of using only the finest ingredients in baking. Thus, whether 
-      you’re looking for an extra special birthday or wedding cake, a cheesecake to top
-       off a dinner party, or just fancy some office treats, we’re ready to spice up your day
+     Ezike Anthony Tobechukwu, the developer of Roadstatusinfo is a final year student of the department of computer scince.
+     He is a passionate and versatile software developer with a keen eye for innovative solutions and a deep commitment to crafting efficient, elegant code.
+     His commitment to staying at the forefront of technology ensures that his work continues to make a significant impact in the ever-evolving world of software development. 
+     When not immersed in code, He enjoys sharing his insights with the developer community. He frequently contributes to tech blogs, forums, and local meetups, aiming to foster knowledge exchange and inspire others to embark on their own programming journeys.
+     This project research  is a Bachelors degree project of computer science, University of Nigeria, UNN and was supervised by Dr. Anichebe Gregory E.
        </p>
        </div>
     </div>

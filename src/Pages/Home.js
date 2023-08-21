@@ -65,7 +65,7 @@ By utilizing this feature, you can easily notify authorities, fellow commuters, 
   
     <div className='message'>
 <h1>Register with RoadStatusInfo today!</h1>
-<h6>Dont miss out on this opportunity, join our growing community today and enjoy the benefits of seamless <br/>connectivity and real-time acess access to rod status information in Enugu state.</h6>
+<h6>Dont miss out on this opportunity, join our growing community today and enjoy  seamless <br/>connectivity and real-time acess access to rod status information in Enugu state.</h6>
 <button onClick={handleClick} className='bttn' >SIGN IN</button>
 
 </div>
