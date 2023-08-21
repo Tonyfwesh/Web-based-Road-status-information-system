@@ -1,5 +1,5 @@
 import img1 from "../image/welcome.jpg"
-import img2 from "../image/roadstatus.jpg"
+import img2 from "../image/roads2.jpg" 
 import img3 from "../image/pothole.jpg"
 
 export const carouselData = [

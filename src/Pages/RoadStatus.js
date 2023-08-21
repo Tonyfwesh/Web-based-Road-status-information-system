@@ -6,7 +6,7 @@ import img1 from "../image/roadsatus2.jpg"
 const RoadStatus = () => {
   return (
     <>
-      <Map/>
+
      <div className='header'>
      Bad Road Status
       </div> 
@@ -93,10 +93,18 @@ const RoadStatus = () => {
          
           </div>
           <div className='timestamp'>22/08/2018 <br/> 01:05pm</div>
+
         </div>
         <hr/>
       </div>
 
+      <div className='mapstatus'>
+<h1>GET AHEAD OF TRAFFIC JAMS!</h1>
+<h6>Beat the traffic and stay ahead of delays! Get access to real-time traffic updates and ensure a smooth journey. 
+  Don't let congestion catch you off guard. Plan your route with the latest traffic status at your fingertips. </h6>
+<button className='bttn'> <a className= "omo" href="https://road-status-traffic.w3spaces.com/traffic.html">View Traffic Status</a></button>
+
+</div>
     </>
   )
 }

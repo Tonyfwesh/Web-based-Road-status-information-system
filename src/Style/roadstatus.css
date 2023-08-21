@@ -1,3 +1,59 @@
+.mapstatus{
+    /* background-image:  url("../image/new.jpg"); */
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 66%), url("../image/roads1.jpg");
+    object-fit: cover;
+      background-position: center;
+      background-size: cover;
+    height: 50vh;
+    /* background-color: rgb(11, 42, 11); */
+    margin: 0 7% 0 7%;
+    padding-left: 4%;
+      padding-right: 4%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+  }
+  
+  .mapstatus h1{
+    color: white;
+      width: 70%;
+      padding-top: 6%;
+      font-size: 35px;
+      font-weight: bold;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      
+      
+  }
+  .mapstatus h6{
+    font-size: 20px;
+    width: 60%;
+    padding-top: 1%;
+    font-weight: 100;
+    color: white;
+  
+  }
+
+  .omo{
+    font-weight: bold;
+    font-size: 15px;
+    color:#00650A;
+    text-decoration: none;
+  }
+  
+  .bttn {
+    background-color: white;
+    color: rgb(11, 42, 11);
+    font-size: 15px;
+    height:35px;
+    width: 16%;
+    display: flex;
+    margin-top: 1%;
+    align-items: center;
+    border: none;
+    justify-content: center;
+  
+  }
+
 .header{
    
 width: 449px;
