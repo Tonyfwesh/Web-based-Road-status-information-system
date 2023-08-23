@@ -110,3 +110,10 @@ label{
     color: white;
      
 }
+input::placeholder{
+    color:black;
+
+}
+input{
+    color: black;
+}

@@ -26,7 +26,7 @@ function App() {
     <>
     <Router>
       <AuthProvider>
-    <Navbar/>
+
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/About" element={<About/>}/>
@@ -35,7 +35,7 @@ function App() {
         <Route path="/Signin" element={<Signin/>}/>
         <Route path="/Signup" element={<Signup/>}/>
       </Routes>
-      <Footer/>
+      
       </AuthProvider>
     </Router>
     

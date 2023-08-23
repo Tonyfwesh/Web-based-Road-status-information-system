@@ -1,9 +1,19 @@
 import React from 'react'
 import "../Style/about.css"
+import { Navigate } from 'react-router-dom'
+import {useAuth} from "../context/AuthContext"
+import Navbar from '../Component/Navbar'
+import Footer from '../Component/Footer'
 
 const About = () => {
+
+  const {currentUser} = useAuth()
+  if (!currentUser) {
+    return <Navigate to="/Login" />
+  }
   return (
     <div>
+      <Navbar/>
       <div className='image'>
      <p className='top'>About</p>
     </div>
@@ -45,6 +55,7 @@ The system aims to provide users with up-to-date information on roads that are i
      This project research  is a Bachelors degree project of computer science, University of Nigeria, UNN and was supervised by Dr. Anichebe Gregory E.
        </p>
        </div>
+       <Footer/>
     </div>
   )
 }

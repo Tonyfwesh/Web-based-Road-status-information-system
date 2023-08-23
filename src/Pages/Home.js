@@ -2,6 +2,8 @@ import React from 'react'
 import Homeslide from '../Component/Homeslide'
 import "../Style/home.css"
 import { useNavigate } from 'react-router-dom'
+import Navbar from '../Component/Navbar'
+import Footer from '../Component/Footer'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -9,6 +11,8 @@ const Home = () => {
     navigate("/Signin")
   }
   return (
+    <>
+    <Navbar/>
     <div className="container" style={{backgroundColor: "rgb(219, 243, 224)"}}>
       <Homeslide/>
       <div className='welcometext'>
@@ -71,6 +75,8 @@ By utilizing this feature, you can easily notify authorities, fellow commuters, 
 </div>
 
     </div>
+    <Footer/>
+    </>
   )
 }
 

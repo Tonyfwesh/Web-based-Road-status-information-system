@@ -105,3 +105,15 @@ select{
     width: 120px;
     height: 300px;
 }
+input::placeholder{
+    color:black;
+}
+.type{
+    font-size: 18px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.comment{
+    display:flex;
+    align-items: center;
+}

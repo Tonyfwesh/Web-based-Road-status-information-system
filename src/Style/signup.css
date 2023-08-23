@@ -14,7 +14,7 @@
 }
 .holderrr{
     width: 35%;
-   height: 800px;
+   height: 900px;
    position: absolute;
    top: 50%;
    left: 50%;
@@ -115,4 +115,7 @@ select{
     font-weight:normal; 
     margin-left: 35%;
     color: white;   
+}
+::placeholder{
+    color:black;
 }

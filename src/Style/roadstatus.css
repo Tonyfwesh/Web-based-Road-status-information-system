@@ -25,9 +25,10 @@
       
   }
   .mapstatus h6{
+
     font-size: 20px;
     width: 60%;
-    padding-top: 1%;
+    padding-top: -1%;
     font-weight: 100;
     color: white;
   
@@ -93,7 +94,7 @@ line-height: normal;
 }
 .contain{
     
-height: 1060px;
+height: 300px;
 flex-shrink: 0;
 background: #E7FFD3;
 margin-left: 3%;
@@ -111,7 +112,8 @@ margin-bottom: 3%;
 .link{
     width: 155px;
     height: 41px;
-    flex-shrink: 0;
+    margin-left: 40%;
+    margin-top: 15px;
     border-radius: 4px;
     background: #00650A;
     color: white;
@@ -148,4 +150,29 @@ hr{
     margin-top: 2%;
     height: 1px;
     background: #00650A;
+}
+.chat{
+  color:black;
+  font-size: 22px;
+  width:90%;
+  margin-left: 5%;
+  margin-top:2%;
+  font-weight: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.typee{
+  margin-left: 5%;
+  width: 1200px;
+    height:290px;
+    border: none;
+    background-color: #d6d6d6;
+  font-size: 18px;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ccomment{
+  margin-top: 35px;
+  margin-left: 70px;
 }

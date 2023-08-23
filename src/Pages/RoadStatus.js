@@ -1,13 +1,51 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Map from '../Component/Map'
 import "../Style/roadstatus.css"
 import img1 from "../image/roadsatus2.jpg"
+import { Navigate } from 'react-router-dom'
+import {useAuth} from "../context/AuthContext"
+import Navbar from '../Component/Navbar'
+import Footer from '../Component/Footer'
+import axios from 'axios'
+import { db } from '../config/firebase';
+import { collection, getDocs, addDoc } from "firebase/firestore"
 
 const RoadStatus = () => {
+
+  const [newName, setNewName] = useState("")
+  const [newReview, setNewReview] = useState("")
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(usersColectionRef)
+      setUsers(data.docs.map((docs) => ({ ...docs.data(), id: docs.id })))
+    }
+    getUsers()
+  }, [])
+
+  const usersColectionRef = collection(db, "review")
+
+  const createUser = async () => {
+    await addDoc(usersColectionRef, { name: newName, email: newReview })
+
+
+  }
+
+
+  const {currentUser} = useAuth()
+  if (!currentUser) {
+    return <Navigate to="/Login" />
+  }
+
+
+  
+
+  
   return (
     <>
-
-     <div className='header'>
+    <Navbar/>
+     {/* /<div className='header'>
      Bad Road Status
       </div> 
       <div className='grid'>
@@ -25,79 +63,11 @@ const RoadStatus = () => {
          style={{ backgroundImage: `url(${img1})` }}>
           <h2>Ngwa Road</h2>
         <p>Click for more details</p>
-          </div>
-      </div>
-      <div className='header'>
-      Road Condition Status
-      <p>Tell us about the road condition in your area</p>
+          </div> */}
+          <div className='header'>
+      Tffic Flow Condition Status
+      <p>Find out the trafffic condition in your area</p>
       </div> 
-      <div className='contain'>
-        <div className='btn-wrapper'>
-        <button className='link'>Add messge</button>
-        </div>
-        <p className='mini-text'>Nura Aisha</p>
-        <div className='grid2'>
-        <div className='rectangle'>
-          <p>
-          The future of any website depends on its conversion rate.
-           If the website is said to be having a
-            good conversion rate, then it means they
-             are making a good revenue, and if the.
-              If the website is said to be having a 
-              good conversion rate, then it means they
-               are making a good revenue The accompanying
-                music video was directed by Xavier Dolan 
-                and co-stars Adele and Tristan Wilds. 
-                The music video for the song broke the Vevo 
-          </p>
-         
-          </div>
-          <div className='timestamp'>22/08/2018 <br/> 01:05pm</div>
-        </div>
-        <hr/>
-        <p className='mini-text'>Anthony Ezike</p>
-        <div className='grid2'>
-        <div className='rectangle'>
-          <p>
-          The future of any website depends on its conversion rate.
-           If the website is said to be having a
-            good conversion rate, then it means they
-             are making a good revenue, and if the.
-              If the website is said to be having a 
-              good conversion rate, then it means they
-               are making a good revenue The accompanying
-                music video was directed by Xavier Dolan 
-                and co-stars Adele and Tristan Wilds. 
-                The music video for the song broke the Vevo 
-          </p>
-         
-          </div>
-          <div className='timestamp'>22/08/2018 <br/> 01:05pm</div>
-        </div>
-        <hr/>
-        <p className='mini-text'>Nura Aisha</p>
-        <div className='grid2'>
-        <div className='rectangle'>
-          <p>
-          The future of any website depends on its conversion rate.
-           If the website is said to be having a
-            good conversion rate, then it means they
-             are making a good revenue, and if the.
-              If the website is said to be having a 
-              good conversion rate, then it means they
-               are making a good revenue The accompanying
-                music video was directed by Xavier Dolan 
-                and co-stars Adele and Tristan Wilds. 
-                The music video for the song broke the Vevo 
-          </p>
-         
-          </div>
-          <div className='timestamp'>22/08/2018 <br/> 01:05pm</div>
-
-        </div>
-        <hr/>
-      </div>
-
       <div className='mapstatus'>
 <h1>GET AHEAD OF TRAFFIC JAMS!</h1>
 <h6>Beat the traffic and stay ahead of delays! Get access to real-time traffic updates and ensure a smooth journey. 
@@ -105,6 +75,39 @@ const RoadStatus = () => {
 <button className='bttn'> <a className= "omo" href="https://road-status-traffic.w3spaces.com/traffic.html">View Traffic Status</a></button>
 
 </div>
+
+      <div className='header'>
+      Road Condition Status
+      <p>Tell us about the road condition in your area</p>
+      </div> 
+      <div>
+      <input type='text' className='ccomment'
+       onChange={(e) => { setNewName(e.target.value) }}
+       placeholder='Enter your username'/>
+      <label for="commentt" className='commentt'></label>
+           <textarea 
+            onChange={(e) => { setNewReview(e.target.value) }}
+           className='typee' type='text' placeholder='Please type your current road cndition here '
+           ></textarea>
+           <button className='link'onClick={createUser}>Add messge</button>
+           </div>
+
+           {users.map((user, index) => (
+              <div key={index} className=' contain'>
+              <p className='mini-text'>{user.name}</p>
+              <div className='rectangle'>
+                <p className='chat'>
+               {user.email}
+                </p>
+                
+                </div>
+                <hr/>
+                </div>
+              ))}
+     
+
+      
+<Footer/>
     </>
   )
 }

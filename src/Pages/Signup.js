@@ -63,12 +63,12 @@ const Signup = () => {
           <label className='textt1'>firstname</label>
           <input type="etext" 
           
-          placeholder="surname" ></input>
+          placeholder="firstname" ></input>
 
           <label className='textt1'>username</label>
           <input type="etext" 
           
-          placeholder="surname" ></input>
+          placeholder="Username" ></input>
 
           <label className='textt1'>Gender</label>
           <select >
