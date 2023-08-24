@@ -9,7 +9,7 @@ const About = () => {
 
   const {currentUser} = useAuth()
   if (!currentUser) {
-    return <Navigate to="/Login" />
+    return <Navigate to="/signin" />
   }
   return (
     <div>

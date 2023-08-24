@@ -1,44 +1,71 @@
-import React,{useEffect, useState} from 'react'
+import React, { useState } from 'react';
+import { useNavigate, Navigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import Navbar from '../Component/Navbar';
+import Footer from '../Component/Footer';
+import { db } from '../config/firebase';
+import {
+  collection,
+  addDoc,
+} from 'firebase/firestore';
+import { storage } from '../config/firebase';
+import { v4 } from 'uuid';
+import {
+  getDownloadURL,
+  uploadBytes,
+  ref,
+} from 'firebase/storage';
 import "../Style/badroad.css"
-import { Navigate } from 'react-router-dom'
-import {useAuth} from "../context/AuthContext"
-import Navbar from '../Component/Navbar'
-import Footer from '../Component/Footer'
-import { db } from '../config/firebase'
-import {collection,addDoc, getDocs}from "firebase/firestore"
 
 const Report = () => {
-  const [state, setState]= useState("")
-  const [surname,setSurname] = useState("")
-  const [firstname,setfirstname] = useState("")
-  const [othername, setOthername] = useState("")
-  const [email, setEmail] = useState("")
-  const [phonenumber,setPhonenumber] = useState("")
-  const [city,setCity] = useState("")
-  const [address,setAddress] = useState("")
-  const [rating,setRating] = useState("")
-  const [describe,setDescribe] =useState("")
+  const [state, setState] = useState('');
+  const [surname, setSurname] = useState('');
+  const [firstname, setFirstname] = useState('');
+  const [othername, setOthername] = useState('');
+  const [email, setEmail] = useState('');
+  const [phonenumber, setPhonenumber] = useState('');
+  const [city, setCity] = useState('');
+  const [address, setAddress] = useState('');
+  const [rating, setRating] = useState('');
+  const [describe, setDescribe] = useState('');
+  const [img, setImg] = useState('');
 
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
-  const {currentUser} = useAuth()
+  const handleUpload = (e) => {
+    const imgs = ref(storage, `imgs/${v4()}`);
+    uploadBytes(imgs, e.target.files[0]).then((data) => {
+      getDownloadURL(data.ref).then((val) => {
+        setImg(val);
+      });
+    });
+  };
+
+  const valRef = collection(db, 'userdetailsreview');
+
+  const createUser = async (e) => {
+    e.preventDefault();
+    
+    await addDoc(valRef, {
+      surname: surname,
+      firstname: firstname,
+      othername: othername,
+      imgurl: img,
+      email: email,
+      phonenumber: phonenumber,
+      city: city,
+      address: address,
+      roaadrating: rating,
+      describetheriad: describe,
+    });
+    alert('Data added successfully');
+  };
+
   if (!currentUser) {
-    return <Navigate to="/Login" />
+    return <Navigate to="/signin" />;
   }
-
-  const userCollectionRef = collection(db,"userdetailsreview")
-
-  const createUser= async() => {
-    await addDoc(userCollectionRef,{surname: surname, firstname:firstname, othername:othername,
-    email:email, phonenumber:phonenumber,city:city, address:address, roaadrating:rating, describetheriad:describe})
-  }
-
-  // useEffect(() =>{
-  //   constgetUsers = async() => {
-  //     const data = await getDocs(userCollectionRef)
-  //     setUsers(data.docs.map((docs) =>({...docs.data(),id:docs.id})))
-  //   }
-  //   getUsers()
-  // },  [])
+ 
   return (
     <>
     <Navbar/>
@@ -55,7 +82,7 @@ const Report = () => {
           
            <label for="name">First Name:</label>
            <input type='text' placeholder='First Name'
-           onChange={(e) => {setfirstname(e.target.value)}}
+           onChange={(e) => {setFirstname(e.target.value)}}
            ></input>
            
            <label for="name">Other Names:</label>
@@ -102,7 +129,7 @@ const Report = () => {
            ></textarea>
 
            <label for="picture">Attach File:</label>
-           <input type='file' name='file' id='file'></input>
+           <input type='file' name='file' id='file' onChange={(e) =>handleUpload(e)}></input>
            
           
           <button className='button' onClick={createUser}> submit </button>

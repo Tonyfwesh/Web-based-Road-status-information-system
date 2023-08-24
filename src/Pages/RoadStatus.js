@@ -7,14 +7,40 @@ import {useAuth} from "../context/AuthContext"
 import Navbar from '../Component/Navbar'
 import Footer from '../Component/Footer'
 import axios from 'axios'
+import Modal from 'react-modal';
 import { db } from '../config/firebase';
 import { collection, getDocs, addDoc } from "firebase/firestore"
+
+
+const modalStyles = {
+  content: {
+    width: '40%',
+    margin: 'auto',
+    padding: '20px',
+    height: "500px"
+  },
+};
+
+Modal.setAppElement('#root');
 
 const RoadStatus = () => {
 
   const [newName, setNewName] = useState("")
   const [newReview, setNewReview] = useState("")
   const [users, setUsers] = useState([])
+  const [data, setData] = useState([])
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedStory, setSelectedStory] = useState(null);
+
+  const openModal = (index) => {
+    setSelectedStory(index);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedStory(null);
+    setModalIsOpen(false);
+  };
 
   useEffect(() => {
     const getUsers = async () => {
@@ -24,6 +50,18 @@ const RoadStatus = () => {
     getUsers()
   }, [])
 
+
+  const valRef = collection(db, 'userdetailsreview');
+  useEffect(() => {
+    const getData = async () => {
+      const dataDb = await getDocs(valRef);
+     
+      setData(dataDb.docs.map((docs) => ({ ...docs.data(), id: docs.id })))
+    }
+    getData()
+  }, [])
+
+
   const usersColectionRef = collection(db, "review")
 
   const createUser = async () => {
@@ -31,39 +69,16 @@ const RoadStatus = () => {
 
 
   }
-
-
   const {currentUser} = useAuth()
   if (!currentUser) {
-    return <Navigate to="/Login" />
+    return <Navigate to="/signin" />
   }
-
-
-  
 
   
   return (
     <>
     <Navbar/>
-     {/* /<div className='header'>
-     Bad Road Status
-      </div> 
-      <div className='grid'>
-        <div className='content'
-        style={{ backgroundImage: `url(${img1})` }}>
-        <h2>Ngwa Road</h2>
-        <p>Click for more details</p>
-        </div>
-        <div className='content'
-         style={{ backgroundImage: `url(${img1})` }}>
-          <h2>Ngwa Road</h2>
-        <p>Click for more details</p>
-        </div>
-        <div className='content'
-         style={{ backgroundImage: `url(${img1})` }}>
-          <h2>Ngwa Road</h2>
-        <p>Click for more details</p>
-          </div> */}
+     
           <div className='header'>
       Tffic Flow Condition Status
       <p>Find out the trafffic condition in your area</p>
@@ -75,6 +90,43 @@ const RoadStatus = () => {
 <button className='bttn'> <a className= "omo" href="https://road-status-traffic.w3spaces.com/traffic.html">View Traffic Status</a></button>
 
 </div>
+ 
+<div className='header'>
+     Bad Road Status
+     </div> 
+     <p>Reports on bad road in Enugu state</p>
+     <div className='grid'>
+{data.map((user, index) => (
+              <div key={index} className='box'   onClick={() => openModal(index)}>
+               
+             <div className='content'>
+  <img src={user.imgurl} />
+  <div className='details'>
+        <h2>{user.city} Road</h2>
+        <p>{user.describetheriad}</p>
+        </div>
+        </div>
+                </div>
+                
+              ))}
+                <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={modalStyles}
+        contentLabel="Story Modal"
+      >
+        <button className="close-btn" onClick={closeModal}>X</button>
+        {selectedStory !== null && (
+          <div className="modal-content">
+            <h2 className='modal-head'>{data[selectedStory].city} Road</h2>
+            <div className='modal-details'>Name: {data[selectedStory].firstname}</div>
+            <div className='modal-details'>Road Address: {data[selectedStory].address}</div>
+            <div className='modal-details'>Description: {data[selectedStory].describetheriad}</div>
+          </div>
+        )}
+      </Modal>
+              </div>
+     
 
       <div className='header'>
       Road Condition Status

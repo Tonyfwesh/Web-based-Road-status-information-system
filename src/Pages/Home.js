@@ -1,15 +1,25 @@
 import React from 'react'
 import Homeslide from '../Component/Homeslide'
 import "../Style/home.css"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Navigate } from 'react-router-dom'
 import Navbar from '../Component/Navbar'
 import Footer from '../Component/Footer'
+import { useAuth } from '../context/AuthContext'
 
 const Home = () => {
+
+  
+
   const navigate = useNavigate()
   const handleClick = () =>{
-    navigate("/Signin")
+    navigate("/signin")
   }
+
+  const {currentUser} = useAuth()
+  if (!currentUser) {
+    return <Navigate to="/signin" />
+  }
+  
   return (
     <>
     <Navbar/>

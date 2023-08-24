@@ -57,8 +57,7 @@
 
 .header{
    
-width: 449px;
-height: 63px;
+
 flex-shrink: 0;
 color: #00650A;
 font-family: Inter;
@@ -67,26 +66,39 @@ font-style: normal;
 font-weight: 800;
 line-height: normal;
 }
+
 .grid{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-content: space-around;
     margin-left: 8%;
     margin-right: 8%;
+    justify-content: space-around;
+   
 }
-.content{
+.content img{
     background-position: center;
     object-fit: cover;
     background-size: cover;
-    width: 420px;
-    height: 564px;
+    width: 320px;
+    height: 464px;
     margin-bottom: 20px;
     border-radius: 1%;
+    border:  black;
+}
+.details{
+  position: relative;
+  bottom: 100px;
+  background-color: rgb(222, 219, 219);
+  width: 296px;
+  display: block;
+  align-items: center;
 }
 .header p{
 color: #040D00;
 font-family: Inter;
-font-size: 20px;
+font-size: 13px;
 font-style: italic;
 font-weight: 300;
 line-height: normal;
@@ -163,7 +175,7 @@ hr{
 
 .typee{
   margin-left: 5%;
-  width: 1200px;
+  width: 90%;
     height:290px;
     border: none;
     background-color: #d6d6d6;
@@ -171,8 +183,30 @@ hr{
   color: black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.box{
+  cursor: pointer;
+}
 
 .ccomment{
   margin-top: 35px;
   margin-left: 70px;
+}
+.modal-head{
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+.close-btn{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 95%;
+  background: transparent;
+}
+.modal-content{
+  padding: 0 5% 0 5%;
+}
+.modal-details{
+  font-size: 20px;
+  margin-top: 8%;
+  
 }
