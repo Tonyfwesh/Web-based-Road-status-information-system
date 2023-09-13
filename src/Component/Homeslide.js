@@ -23,7 +23,7 @@ const Homeslide = () => {
         {carouselData.map((item, index) => (
           <div key={index} className='setwidth'>
         <div className='slide-details' style={{backgroundImage:`url(${item.url})`}}>
-          <div className='details'>
+          <div className='homeslide-text'>
           <h1>{item.text}</h1>
           <h3>{item.subtext}</h3>
           </div>
